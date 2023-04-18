@@ -1,10 +1,23 @@
 
-<mat-toolbar color="primary">
-
+<mat-toolbar  id="navbar">
     <mat-toolbar-row>
-      <span>CineFarixi</span>
+      <img id="logo" src="../assets/img/logo1.png" alt="logo">
       <span class="example-spacer"></span>
-      <mat-icon class="example-icon">favorite</mat-icon>
-      <mat-icon class="example-icon">delete</mat-icon>
+      
+      <!-- <button mat-button >
+        <mat-icon >menu</mat-icon>
+      </button> -->
+
+      <a mat-button routerLink="/" routerLinkActive="active-link" >
+        <mat-icon >home</mat-icon> 
+        <span >Home</span>
+      </a>
+      <a mat-button routerLink="/movies" routerLinkActive="active-link">
+        <mat-icon>movie</mat-icon> 
+        <span >Películas</span>
+      </a>
+
+
+
     </mat-toolbar-row>
 </mat-toolbar>

@@ -10,16 +10,20 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MatToolbarModule} from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatTableModule} from '@angular/material/table';
+import { FormsModule} from '@angular/forms';
+
 import { HomeComponent } from './home/home.component';
 import { MoviesComponent } from './movies/movies.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    MoviesComponent
+    MoviesComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +31,11 @@ import { MoviesComponent } from './movies/movies.component';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTableModule,
+    FormsModule,
+    HttpClientModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

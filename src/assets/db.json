@@ -1,0 +1,25 @@
+{
+  "movies":[
+    {
+      "id":1,
+      "name":"Mario bros",
+      "photo": "url",
+      "duration": 120,
+      "genre": "action"
+    },
+    {
+      "id":2,
+      "name":"Mario bros",
+      "photo": "https://w7.pngwing.com/pngs/396/460/png-transparent-mario-kart-double-dash-mario-kart-wii-bowser-gamecube-mario-mario-kart-double-dash-mario-kart-wii-bowser.png",
+      "duration": 120,
+      "genre": "action"
+    },
+    {
+      "id":3,
+      "name":"Mario bros",
+      "photo": "url",
+      "duration": 120,
+      "genre": "action"
+    }
+  ]
+}

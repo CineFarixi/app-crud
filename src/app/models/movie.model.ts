@@ -1,7 +1,7 @@
 export interface Movie {
     id:         number;
     name:       string;
-    photo:      string;
+    photoUrl:      string;
     duration:       number;
     genre:          string;
 }

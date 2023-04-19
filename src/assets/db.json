@@ -1,25 +1,25 @@
 {
-  "movies":[
+  "movies": [
     {
-      "id":1,
-      "name":"Mario bros",
-      "photo": "url",
-      "duration": 120,
-      "genre": "action"
+      "name": "test",
+      "photoUrl": "test",
+      "duration": "60",
+      "genre": "test",
+      "id": 3
     },
     {
-      "id":2,
-      "name":"Mario bros",
-      "photo": "https://w7.pngwing.com/pngs/396/460/png-transparent-mario-kart-double-dash-mario-kart-wii-bowser-gamecube-mario-mario-kart-double-dash-mario-kart-wii-bowser.png",
-      "duration": 120,
-      "genre": "action"
+      "name": "a",
+      "photoUrl": "url",
+      "duration": "120",
+      "genre": "action",
+      "id": 4
     },
     {
-      "id":3,
-      "name":"Mario bros",
-      "photo": "url",
-      "duration": 120,
-      "genre": "action"
+      "name": "a",
+      "photoUrl": "url",
+      "duration": "120",
+      "genre": "action",
+      "id": 7
     }
   ]
 }

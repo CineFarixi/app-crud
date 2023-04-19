@@ -1,45 +1,41 @@
 
 
-<form action="" #movieForm>
-    <mat-form-field>
-        <input matInput placeholder="Movie name" name="name" [(ngModel)]="moviedata.name">
+  <form (submit)="onSubmit()" #movieForm="ngForm" name="movieForm">
+      <mat-form-field appearence ="fill">
+          <input type="text" matInput placeholder="Movie name" name="name" [(ngModel)]="moviedata.name">
+      </mat-form-field>
+      <mat-form-field appearence ="fill">
+        <input type="text" matInput placeholder="URL of the picture" name="photoUrl" [(ngModel)]="moviedata.photoUrl">
     </mat-form-field>
-    <mat-form-field>
-        <input matInput placeholder="Duration" name="name" [(ngModel)]="moviedata.duration">
-    </mat-form-field>
-    <mat-form-field>
-        <input matInput placeholder="Genre" name="name" [(ngModel)]="moviedata.name">
-    </mat-form-field>
+      <mat-form-field appearence ="fill">
+          <input type="text" matInput placeholder="Duration" name="duration" [(ngModel)]="moviedata.duration">
+      </mat-form-field>
+      <mat-form-field appearence ="fill">
+          <input type="text" matInput placeholder="Genre" name="genre" [(ngModel)]="moviedata.genre">
+      </mat-form-field>
 
-    <ng-container>
-        <button mat-button color="primary">Create</button>
-        <button mat-button color="warn" >Cancel</button>
-      
-    </ng-container>
-</form>
+      <ng-container>
+          <!-- works -->
+          <button mat-button color="primary" >Create</button>
+          <!-- Falta funcionalidad TODO -->
+          <!-- <button mat-button color="warn" >Cancel</button> -->
+        
+      </ng-container>
+  </form>
 
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-    <!--- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" -->
   
-    <!-- Position Column -->
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef> No. </th>
       <td mat-cell *matCellDef="let element"> {{element.id}} </td>
     </ng-container>
   
-    <!-- Name Column -->
     <ng-container matColumnDef="name">
       <th mat-header-cell *matHeaderCellDef> Name </th>
       <td mat-cell *matCellDef="let element"> {{element.name}} </td>
     </ng-container>
   
-    <!-- Weight Column -->
-    <!-- <ng-container matColumnDef="weight">
-      <th mat-header-cell *matHeaderCellDef> Weight </th>
-      <td mat-cell *matCellDef="let element"> {{element.photo}} </td>
-    </ng-container> -->
   
     <!-- Symbol Column -->
     <ng-container matColumnDef="photo">
@@ -61,7 +57,16 @@
         <td mat-cell *matCellDef="let element"> {{element.genre}} </td>
       </ng-container>
 
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef> actions </th>
+      <td mat-cell *matCellDef = "let element">
+        <a mat-raised-button color="warn" (click) = deleteMovie(element.id)>
+          <mat-icon>delete</mat-icon>
+        </a>
+        
+      </td>
 
+    </ng-container> 
     
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>

@@ -42,9 +42,8 @@ export class MoviesComponent {
     this.moviedata.id = 0
     this.HttpDataService.createMovie(this.moviedata).subscribe((res : any)=>{
         this.dataSource.data.push(this.moviedata)
-        
+        this.getAllMovies();
     })
-    this.getAllMovies();
   }
   
 

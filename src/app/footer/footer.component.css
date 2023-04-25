@@ -1,0 +1,13 @@
+.mat-toolbar {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .mat-toolbar span {
+    margin: 0;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+  }

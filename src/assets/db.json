@@ -1,25 +1,108 @@
 {
   "movies": [
     {
-      "name": "test",
-      "photoUrl": "test",
-      "duration": "60",
-      "genre": "test",
-      "id": 3
+      "id": 1,
+      "name": "El Padrino",
+      "photoUrl": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/ApiEfzSkrqS4m1L5a2GwWXzIiAs.jpg",
+      "duration": 192,
+      "genre": "Comedia"
     },
     {
-      "name": "a",
-      "photoUrl": "url",
-      "duration": "120",
-      "genre": "action",
-      "id": 4
+      "id": 2,
+      "name": "El Caballero de la Noche",
+      "photoUrl": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/8QDQExnfNFOtabLDKqfDQuHDsIg.jpg",
+      "duration": 210,
+      "genre": "Acción, Drama, Crimen"
     },
     {
-      "name": "a",
-      "photoUrl": "url",
-      "duration": "120",
-      "genre": "action",
-      "id": 7
+      "id": 3,
+      "name": "El Señor de los Anillos: El Retorno del Rey",
+      "photoUrl": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/mWuFbQrXyLk2kMBKF9TUPtDwuPx.jpg",
+      "duration": 300,
+      "genre": "Aventura, Drama, Fantasía"
+    },
+    {
+      "id": 4,
+      "name": "Forrest Gump",
+      "photoUrl": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/oiqKEhEfxl9knzWXvWecJKN3aj6.jpg",
+      "duration": 142,
+      "genre": "Drama, Comedia, Romance"
+    },
+    {
+      "id": 5,
+      "name": "Pulp Fiction",
+      "photoUrl": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/hNcQAuquJxTxl2fJFs1R42DrWcf.jpg",
+      "duration": 180,
+      "genre": "Drama, Crimen"
+    },
+    {
+      "id": 6,
+      "name": "El Club de la Pelea",
+      "photoUrl": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/1yWmCAIGSVNuTOGyz9F48W9g1Ux.jpg",
+      "duration": 182,
+      "genre": "Drama"
+    },
+    {
+      "id": 7,
+      "name": "La Lista de Schindler",
+      "photoUrl": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/3Ho0pXsnMxpGJWqdOi0KDNdaTkT.jpg",
+      "duration": 195,
+      "genre": "Drama, Historia"
+    },
+    {
+      "id": 8,
+      "name": "El Rey León",
+      "photoUrl": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/b0MxU37dNmMwKtoPVYPKOZSIrIn.jpg",
+      "duration": 88,
+      "genre": "Animación, Aventura, Drama"
+    },
+    {
+      "id": 10,
+      "name": "El Silencio de los Inocentes",
+      "photoUrl": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/vCe7kys9MPip9bt6N8gqx8KTm9f.jpg",
+      "duration": 120,
+      "genre": "Drama, Crimen"
+    },
+    {
+      "id": 11,
+      "name": "The Shawshank Redemption",
+      "photoUrl": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg",
+      "duration": 142,
+      "genre": [
+        "Drama"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "The Godfather",
+      "photoUrl": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/rPdtLWNsZmAtoZl9PK7S2wE3qiS.jpg",
+      "duration": 175,
+      "genre": [
+        "Drama",
+        "Crime"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "The Dark Knight",
+      "photoUrl": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+      "duration": 152,
+      "genre": [
+        "Action",
+        "Crime",
+        "Drama"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "The Lord of the Rings: The Fellowship of the Ring",
+      "photoUrl": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg",
+      "duration": 178,
+      "genre": [
+        "Adventure",
+        "Fantasy",
+        "Action"
+      ]
     }
   ]
 }

@@ -17,6 +17,7 @@ import { HomeComponent } from './home/home.component';
 import { MoviesComponent } from './movies/movies.component';
 import { HttpClientModule } from '@angular/common/http';
 import {MatInputModule} from '@angular/material/input';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import {MatInputModule} from '@angular/material/input';
     NavbarComponent,
     HomeComponent,
     MoviesComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

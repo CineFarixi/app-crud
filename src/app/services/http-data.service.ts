@@ -25,4 +25,7 @@ export class HttpDataService {
   createMovie(item: Movie){
     return this.http.post<Movie>(this.base_url,JSON.stringify(item),this.httpOptions)
   }
+  updateMovie(id:string, item: Movie): Observable<Movie>{
+    return this.http.put<Movie>(`${this.base_url}/${id}`,JSON.stringify(item),this.httpOptions) 
+  }
 }

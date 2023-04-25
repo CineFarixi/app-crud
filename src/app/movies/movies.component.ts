@@ -5,7 +5,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Movie } from '../models/movie.model';
 import { HttpDataService } from '../services/http-data.service';
 
-// import * as _ from 'lodash';
+import * as _ from 'lodash';
 
 @Component({
   selector: 'app-movies',
@@ -18,7 +18,7 @@ export class MoviesComponent {
   movieForm!: NgForm
   moviedata!: Movie
   dataSource = new MatTableDataSource();
-  beignEdited = false
+  beignEdited = false;
   constructor(private HttpDataService: HttpDataService) { 
     this.moviedata= {} as Movie;
   }
@@ -31,8 +31,15 @@ export class MoviesComponent {
     this.getAllMovies();
   }
 
+
+  resetForm(){
+    this.movieForm.resetForm();
+    this.beignEdited = false;
+  }
+
   getAllMovies(){
     this.HttpDataService.getList().subscribe((res: any) => {
+      
       this.dataSource.data= res;
     })
 
@@ -41,7 +48,6 @@ export class MoviesComponent {
   addMovie(){
     this.moviedata.id = 0
     this.HttpDataService.createMovie(this.moviedata).subscribe((res : any)=>{
-        this.dataSource.data.push(this.moviedata)
         this.getAllMovies();
     })
   }
@@ -58,11 +64,32 @@ export class MoviesComponent {
       }
     })    
   }
+  
   onSubmit(){
-    console.log("Llegó a este punto")
     if(this.movieForm.form.valid){
-      console.log("Todos los campos son validos");
-      this.addMovie()
+      console.log("Todos los campos son válidos");
     }
   }
+
+
+
+  editMovie(movie : Movie){
+    this.moviedata = _.cloneDeep(movie);
+    this.beignEdited = true;
+  }
+  updateMovie(el_id : string){
+    this.HttpDataService.updateMovie(el_id, this.moviedata).subscribe((res: any) => {      
+      this.dataSource.data = this.dataSource.data.map((o: any) => {
+        if(o.id == res.id){
+          o = res;
+        }
+        return o;
+        });
+        this.resetForm()
+    });
+  }
+
+
+  
+
 }

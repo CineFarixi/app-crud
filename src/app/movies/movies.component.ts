@@ -19,6 +19,8 @@ export class MoviesComponent {
   moviedata!: Movie
   dataSource = new MatTableDataSource();
   beignEdited = false;
+  totalHours = 0;
+  totalMovies = 0;
   constructor(private HttpDataService: HttpDataService) { 
     this.moviedata= {} as Movie;
   }
@@ -90,6 +92,12 @@ export class MoviesComponent {
   }
 
 
-  
-
+  getTotalHours(){
+    this.totalHours = this.dataSource.data.map((t: any) => t.duration).reduce((acc: any, value: any) => acc + value);
+  }
+  getTotalMovies(){
+    
+    this.totalMovies = this.dataSource.data.length +1;
+    
+  }
 }

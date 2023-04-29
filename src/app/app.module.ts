@@ -12,12 +12,15 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule} from '@angular/material/table';
 import { FormsModule} from '@angular/forms';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 import { HomeComponent } from './home/home.component';
 import { MoviesComponent } from './movies/movies.component';
 import { HttpClientModule } from '@angular/common/http';
 import {MatInputModule} from '@angular/material/input';
 import { FooterComponent } from './footer/footer.component';
+import { DialogComponent } from './dialog/dialog.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +29,8 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     MoviesComponent,
     FooterComponent,
+    DialogComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -37,7 +42,10 @@ import { FooterComponent } from './footer/footer.component';
     MatTableModule,
     FormsModule,
     HttpClientModule,
-    MatInputModule
+    MatInputModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

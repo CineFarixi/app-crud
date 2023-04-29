@@ -1,5 +1,5 @@
 
-
+<app-dialog></app-dialog>
   <form (submit)="onSubmit()" #movieForm="ngForm" name="movieForm">
       <mat-form-field appearence ="fill">
           <input type="text" matInput placeholder="Movie name" name="name" [(ngModel)]="moviedata.name">
@@ -9,7 +9,7 @@
         <!-- <button type="button" mat-raised-button (click)="fileInput.click()">Choose File</button> -->
         <!-- <input hidden (change)="onFileSelected($event)" #fileInput type="file">
         <span class="file-name">{{selectedFile?.name}}</span>   -->
-    
+
       </mat-form-field>
       <mat-form-field appearence ="fill">
           <input type="text" matInput placeholder="Duration" name="duration" [(ngModel)]="moviedata.duration">
@@ -25,7 +25,18 @@
       <ng-template #elseTemplate>
         <button mat-button color="primary" type="submit" (click)="addMovie()">Create</button>
       </ng-template>
+
+
+
   </form>
+  <div class="labels-container">
+    
+    <button mat-button color="primary" (click)="getTotalHours()">View Total Hours</button>
+    <label>Total Hours: {{totalHours}}</label>
+    
+    <button mat-button color="primary" (click)="getTotalMovies()">View Total Movies Registered:</button>
+    <label >Total Movies Registered: {{totalMovies}}</label>
+  </div>
 
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
